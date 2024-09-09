@@ -84,7 +84,9 @@ async function submitFormInContainer(e: Event): Promise<void> {
     ) {
         const res = await getData("ProdutoServices/produtos");
         if (!res) return;
-        const id = res?.data?.length ? res?.data?.length + 1 : 0;
+        if (!res.data) return;
+        const produtos: produtoType[] = res.data;
+        const id = produtos[produtos.length - 1].codigo + 1;
         const productBody = {
             ...body,
             codigo: id,
@@ -100,7 +102,9 @@ async function submitFormInContainer(e: Event): Promise<void> {
 
     const res = await getData("CategoriaServices/categorias");
     if (!res) return;
-    const id = res?.data?.length ? res?.data?.length + 1 : 0;
+    if (!res.data) return;
+    const categoria: categoriaType[] = res.data;
+    const id = categoria[categoria.length - 1].codigo + 1;
 
     const categoriaBody = { ...body, codigo: id };
     await postData(`CategoriaServices/categoria/${id}`, categoriaBody);

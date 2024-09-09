@@ -60,6 +60,7 @@ async function getProdutoById(id: number): Promise<Produto | null> {
         );
         if ((row as IProduto[]).length === 0) return null;
         const data = (row as IProduto[])[0];
+        console.log("File: ProdutoAccessor.ts", "Line: 63", data);
         return new Produto(data.Codigo, data.Nome, data.Preco, data.Categoria);
     } catch (err) {
         console.error(err);
@@ -72,6 +73,7 @@ async function getProdutoById(id: number): Promise<Produto | null> {
 async function isProdutoExists(produto: Produto): Promise<boolean> {
     try {
         const produtoDB = await getProdutoById(produto.Codigo);
+        console.log("File: ProdutoAccessor.ts", "Line: 76", produtoDB);
         return produtoDB !== null;
     } catch (err) {
         console.error(err);
@@ -82,7 +84,7 @@ async function isProdutoExists(produto: Produto): Promise<boolean> {
 async function addProduto(produto: Produto): Promise<boolean> {
     const doesExist = await isProdutoExists(produto);
     if (doesExist) return false;
-
+    console.log("File: ProdutoAccessor.ts", "Line: 85", doesExist);
     if (!host || !port || !user || !password || !database) return false;
     const conn = new ConnectionDB(host, Number(port), user, password, database);
     conn.CreatePool();
