@@ -1,0 +1,42 @@
+.footer {
+    background-color: $dark-teal;
+    color: $light;
+    padding: 1rem 0;
+    text-align: center;
+    box-shadow: $box-shadow;
+    margin-top: auto;
+    position: relative;
+    font-size: 0.75rem;
+
+    a {
+        color: $primary-shadow;
+        text-decoration: none;
+
+        &:hover {
+            color: darken($primary-shadow, 10%);
+        }
+    }
+
+    .footer-links {
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 1rem;
+
+        a {
+            margin: 0 1rem;
+        }
+    }
+
+    .footer-social {
+        margin-top: 1rem;
+
+        a {
+            margin: 0 0.5rem;
+            color: $primary-teal;
+
+            &:hover {
+                color: $primary-shadow;
+            }
+        }
+    }
+}

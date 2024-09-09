@@ -1,0 +1,62 @@
+.cart {
+    margin: 3rem 0.5rem;
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 1.5rem;
+}
+
+.product-table {
+    width: 80vw;
+    border-collapse: collapse;
+    margin: 0.5rem;
+    font-size: 0.5rem;
+
+    th,
+    td {
+        padding: 1rem;
+        text-align: left;
+        border: 0.1rem solid $light-teal;
+    }
+
+    th {
+        background-color: $primary-shadow;
+        color: $light-teal;
+    }
+
+    td {
+        text-align: center;
+    }
+
+    .quantity-control {
+        display: grid;
+        grid-template-columns: 1.25rem 1.25rem 1.25rem 1.25rem;
+        justify-items: center;
+        align-items: baseline;
+        font-size: 0.7rem;
+        justify-content: center;
+
+        .fa-minus-circle,
+        .fa-plus-circle,
+        .delete-btn {
+            cursor: pointer;
+            transition: color 0.3s ease;
+        }
+
+        .fa-minus-circle,
+        .delete-btn {
+            color: $remove-color;
+            &:hover {
+                color: darken($remove-color, 10%);
+            }
+        }
+
+        .fa-plus-circle {
+            color: $primary;
+            &:hover {
+                color: darken($primary, 10%);
+            }
+        }
+    }
+}

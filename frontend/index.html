@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Catalogo</title>
+        <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+            integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+            crossorigin="anonymous"
+            referrerpolicy="no-referrer"
+        />
+        <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
+        <link rel="icon" href="/favicon.ico" type="image/x-icon" />
+        <link rel="stylesheet" href="./src/styles.css" />
+        <script type="module" src="./src/main.ts"></script>
+    </head>
+    <body>
+        <header>
+            <nav class="navbar">
+                <a href="index.html">
+                    <img
+                        class="logo"
+                        src="./mushroom.png"
+                        alt="Logo de cogumelo"
+                /></a>
+                <div class="flex">
+                    <button class="icon">
+                        <i class="fa-solid fa-bars fa-2x"></i>
+                        <i class="fa-solid fa-xmark fa-2x hidden"></i>
+                    </button>
+                    <ul class="menu hidden">
+                        <li class="menu-item">
+                            <a><span>Lista de Produtos</span></a>
+                        </li>
+                        <li class="menu-item">
+                            <a><span>Cadastro de Produtos</span></a>
+                        </li>
+                        <li class="menu-item">
+                            <a><span>Cadastro de Categoria</span></a>
+                        </li>
+                        <li class="menu-item">
+                            <a><span>Carrinho</span></a>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+        </header>
+        <div class="wrapper">
+            <div class="overlay hidden">
+                <div class="spinner"></div>
+            </div>
+            <div class="container"></div>
+            <footer class="footer">
+                <div class="footer-links">
+                    <a href="#">Home</a>
+                    <a href="#">About</a>
+                    <a href="#">Services</a>
+                    <a href="#">Contact</a>
+                </div>
+                <div>&copy; 2024, All rights reserved.</div>
+                <div class="footer-social">
+                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                </div>
+            </footer>
+        </div>
+    </body>
+</html>

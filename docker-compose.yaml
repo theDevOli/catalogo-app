@@ -1,0 +1,39 @@
+version: "3.8"
+services:
+    db:
+        image: mysql/mysql-server:latest
+        container_name: my-mysql
+        restart: always
+        env_file:
+            - ./env/db.env
+        ports:
+            - "3306:3306"
+        volumes:
+            - /home/daniel/catalogo-mvp/db/data:/var/lib/mysql
+
+    backend:
+        build:
+            context: ./backend
+            dockerfile: Dockerfile
+        ports:
+            - "8080:8080"
+        volumes:
+            - ./backend:/app
+            - /app/node_modules
+        env_file:
+            - ./env/backend.env
+
+    frontend:
+        build:
+            context: ./frontend
+            dockerfile: Dockerfile
+        ports:
+            - "5173:5173"
+        volumes:
+            - ./frontend:/app
+            - /app/node_modules
+        depends_on:
+            - backend
+networks:
+    default:
+        driver: bridge

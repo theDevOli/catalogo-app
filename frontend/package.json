@@ -1,0 +1,17 @@
+{
+    "name": "frontend",
+    "private": true,
+    "version": "0.0.0",
+    "type": "module",
+    "scripts": {
+        "sass": "sass --watch src/sass/styles.scss:src/styles.css --no-source-map",
+        "dev": "vite",
+        "build": "tsc && vite build",
+        "preview": "vite preview"
+    },
+    "devDependencies": {
+        "sass": "^1.78.0",
+        "typescript": "^5.5.3",
+        "vite": "^5.4.1"
+    }
+}

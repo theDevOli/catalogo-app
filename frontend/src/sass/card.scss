@@ -1,0 +1,58 @@
+@import "./variables";
+
+.card {
+    width: $card-width;
+    border: 0.1rem solid $light;
+    border-radius: $card-border-radius;
+    overflow: hidden;
+    box-shadow: $card-shadow;
+    margin: 2rem auto;
+    background-color: $light-teal;
+    max-height: 20rem;
+    display: grid;
+
+    .card-content {
+        padding: 1rem;
+        position: relative;
+
+        .card-title {
+            font-size: 1.5em;
+            margin: 0;
+            color: $dark;
+        }
+
+        .card-info {
+            margin: 0.5rem 0;
+            font-size: 1em;
+            color: $dark-teal;
+        }
+
+        .cart-info {
+            background-color: $primary-shadow;
+            color: $primary-teal;
+            padding: 1rem;
+            border-radius: 100%;
+            position: absolute;
+            top: 1rem;
+            right: 1rem;
+        }
+
+        .add-to-cart {
+            display: inline-block;
+            padding: 0.6rem 1rem;
+            margin-top: 12px;
+            font-size: 1em;
+            color: $light;
+            background-color: $primary;
+            border: none;
+            border-radius: 0.4rem;
+            cursor: pointer;
+            text-align: center;
+            text-decoration: none;
+
+            &:hover {
+                background-color: $primary-teal;
+            }
+        }
+    }
+}

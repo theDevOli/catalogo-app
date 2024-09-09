@@ -1,0 +1,42 @@
+@import "./variables";
+
+header {
+    margin: 1.2rem;
+}
+
+.navbar {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    background-color: $primary-teal;
+    opacity: 0.85;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 1rem 3rem;
+    z-index: 1000;
+    box-shadow: $box-shadow;
+}
+
+.menu {
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+    gap: 0.5rem;
+
+    .menu-item {
+        display: flex;
+        flex-direction: row;
+        font-size: 0.85rem;
+        transition: color 0.3s ease-in-out;
+
+        a {
+            cursor: pointer;
+        }
+
+        &:hover {
+            color: $primary-shadow;
+        }
+    }
+}

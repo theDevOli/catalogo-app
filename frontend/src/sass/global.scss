@@ -1,0 +1,103 @@
+@import "./variables";
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body,
+html {
+    margin: 0;
+    padding: 0;
+    color: $dark;
+    background-color: $light;
+    font-family: "Inter", sans-serif;
+}
+
+i {
+    color: $dark;
+    width: 2rem;
+    height: 2rem;
+
+    &:hover {
+        color: $primary-shadow;
+    }
+}
+
+button.icon {
+    background: none;
+    border: none;
+    margin: 0;
+    cursor: pointer;
+}
+
+a {
+    text-decoration: none;
+    color: $dark;
+
+    &:hover {
+        color: $primary-shadow;
+        transform: scale(1.1);
+        transition: all 100ms ease-in-out;
+    }
+}
+
+ul {
+    list-style-type: none;
+}
+
+.hidden {
+    display: none !important;
+}
+
+.container {
+    margin-top: 9rem;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+}
+
+.flex {
+    display: flex;
+    flex-direction: column;
+    transition: all 0.5 ease-in-out;
+}
+
+.active {
+    color: $primary-shadow;
+    text-decoration: underline;
+}
+
+.logo {
+    width: 4rem;
+    margin-right: 1rem;
+}
+
+.message-box {
+    width: 80vw;
+    display: flex;
+    justify-content: space-evenly;
+    flex-direction: column;
+    margin: 12rem auto;
+    background-color: $light-teal;
+    padding: 2rem;
+    border-radius: $border-radius;
+    box-shadow: $box-shadow;
+    text-align: center;
+    font-size: 1.5rem;
+    line-height: 2rem;
+    &:hover {
+        transform: scale(1.1);
+        transition: all 0.5s ease-in-out;
+    }
+}
+
+.wrapper {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.container {
+    flex: 1;
+}

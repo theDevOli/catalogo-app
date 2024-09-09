@@ -1,0 +1,168 @@
+@import "./variables";
+
+// 250px +
+@media (min-width: $xsm) {
+}
+// 576px +
+@media (min-width: $sm) {
+    .spinner {
+        width: 2rem;
+        height: 2rem;
+        border-width: 0.2rem;
+    }
+
+    .form-container {
+        max-width: 25rem;
+    }
+
+    .footer {
+        font-size: 1rem !important;
+        .footer-links {
+            flex-direction: row !important;
+            justify-content: center;
+            a {
+                display: block;
+                margin: 0.5rem 0;
+            }
+        }
+    }
+
+    .product-table,
+    .quantity-control {
+        font-size: 1rem !important;
+    }
+    .quantity-control {
+        gap: 0.5rem;
+    }
+
+    .cart {
+        margin: 3rem auto !important;
+    }
+}
+
+// 768px +
+@media (min-width: $md) {
+    button.icon {
+        display: none !important;
+    }
+
+    .menu {
+        display: grid !important;
+        grid-template-columns: 1fr 1fr 1fr 1fr !important;
+        grid-template-rows: 0 !important;
+        gap: 1.5rem !important;
+    }
+
+    .container {
+        margin-top: 5rem;
+        grid-template-columns: 1fr 1fr;
+        & > *:only-child {
+            grid-column: 1 / -1;
+        }
+    }
+
+    .flex {
+        margin-left: 1rem;
+    }
+
+    .logo {
+        width: 4rem;
+    }
+
+    .spinner {
+        width: 2.5rem;
+        height: 2.5rem;
+        border-width: 0.25rem;
+    }
+    .product-table {
+        width: 100%;
+    }
+    .quantity-control {
+        gap: 1rem;
+    }
+}
+
+// 992px +
+@media (min-width: $lg) {
+    // .navbar {
+    //     padding: 0.5rem 6rem;
+    // }
+
+    .form-container {
+        max-width: 30rem;
+    }
+
+    .container {
+        grid-template-columns: 1fr 1fr 1fr;
+        margin-top: 6rem;
+    }
+
+    .logo {
+        width: 5rem;
+    }
+
+    .menu {
+        .menu-item {
+            font-size: 0.95rem;
+        }
+    }
+    .quantity-control {
+        gap: 1.5rem;
+    }
+}
+
+// 1200px +
+@media (min-width: $xl) {
+    // .navbar {
+    //     padding: 0.5rem 8rem;
+    // }
+
+    .container {
+        margin-top: 7rem;
+    }
+
+    .logo {
+        width: 6rem;
+    }
+    .message-box {
+        font-size: 1.5rem;
+        line-height: 5rem;
+        justify-content: center;
+    }
+
+    .flex {
+        margin-left: 2rem;
+    }
+
+    .menu {
+        .menu-item {
+            font-size: 1.05rem;
+        }
+    }
+}
+
+// 1400px +
+@media (min-width: $xxl) {
+    // .navbar {
+    //     padding: 0.5rem 10rem;
+    // }
+
+    .container {
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+    }
+    .message-box {
+        width: 70vw;
+    }
+
+    .menu {
+        .menu-item {
+            font-size: 1.25rem;
+        }
+    }
+
+    .card-content {
+        height: 90%;
+        font-size: 1.1rem;
+        display: grid;
+    }
+}
